@@ -392,3 +392,21 @@ export const customer_reviews = async (credentials) => {
   const response = await axiosInstanceLaravel.post('customer_reviews', credentials);
   return response.data;
 };
+
+export const faqs = async (credentials) => {
+  const response = await axiosInstanceLaravel.post('faqs', credentials);
+  return response.data;
+};
+
+export const about_us = async () => {
+  const response = await axiosInstanceLaravel.get('about_us');
+  return response.data;
+};
+export const privacy_policy = async () => {
+  const response = await axiosInstanceLaravel.get('privacy_policy');
+  return response.data;
+};
+export const terms_conditions = async () => {
+  const response = await axiosInstanceLaravel.get('terms_conditions');
+  return response.data;
+};

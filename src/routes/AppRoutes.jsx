@@ -32,6 +32,8 @@ import Services from '../screens/Services';
 import TenantDetails from '../screens/BuilderScreen/TenantDetails';
 import DonationList from '../screens/DonationList';
 import DonationDetails from '../screens/DonationDetails';
+import PrivacyPolicy from '../screens/PrivacyPolicy';
+import TermsAndConditions from '../screens/TermsAndConditions';
 
 const PrivateRoute = ({ children }) => {
   // console.log(props)
@@ -295,6 +297,18 @@ const AppRoutes = () => {
           path="/about_us"
           element={
               <AboutUs />
+          }
+        />
+        <Route
+          path="/privacy_policy"
+          element={
+              <PrivacyPolicy />
+          }
+        />
+        <Route
+          path="/terms&conditions"
+          element={
+              <TermsAndConditions />
           }
         />
         <Route

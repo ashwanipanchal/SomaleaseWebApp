@@ -96,8 +96,8 @@ function Home() {
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
-							<p class="d-inline-flex sm-small text-light rounded-5 px-2 py-1 bg-dark align-items-center">We just launched our service in New York, United States<span class="sm-small px-2 rounded-5 bg-primary text-light ms-2">New</span></p>
-							<h2>Find Your Dream House<br/>In Europe Now.</h2>
+							{/* <p class="d-inline-flex sm-small text-light rounded-5 px-2 py-1 bg-dark align-items-center">We just launched our service in New York, United States<span class="sm-small px-2 rounded-5 bg-primary text-light ms-2">New</span></p> */}
+							<h2>Find Your Dream House<br/>In Somalease & Kenya Now.</h2>
 							<p class="small">Find homes in 80+ different countries represented byb 700 leading member brokerages.</p>
 							<div class="full-search-2 eclip-search italian-search hero-search-radius mt-5">
 								<div class="hero-search-content">
@@ -178,7 +178,7 @@ function Home() {
 						<div class="col-lg-7 col-md-10 text-center">
 							<div class="sec-heading center mb-4">
 								<h2>Explore Services</h2>
-								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
+								{/* <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p> */}
 							</div>
 						</div>
 					</div>
@@ -276,7 +276,7 @@ function Home() {
 			{/* <!-- ============================ Category End ================================== --> */}
 
       {/* <!-- ============================ Step How To Use Start ================================== --> */}
-      <section>
+      {/* <section>
   			<div class="container">
 
   				<div class="row justify-content-center">
@@ -350,7 +350,7 @@ function Home() {
   				</div>
 
   			</div>
-  		</section>
+  		</section> */}
 
 		  <section>
 		<div class="footer-area pt-150 pb-150" style={{backgroundImage:`url(${dummy})`, paddingTop:150, paddingBottom:150}}>

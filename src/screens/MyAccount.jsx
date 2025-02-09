@@ -181,13 +181,13 @@ function MyAccount() {
 										
 										<div class="d-navigation">
 											<ul>
-												<li  class={positions == 1 && "active" } onClick={() => setPostion(1)}><a ><i class="fa-solid fa-address-card"></i>My Profile</a></li>
-												<li class={positions == 2 && "active" } onClick={() => setPostion(2)}><a ><i class="fa-solid fa-gauge"></i>Manage</a></li>
-												<li class={positions == 3 && "active" } onClick={() => setPostion(3)}><a ><i class="fa-solid fa-bookmark"></i>Raad Reeb</a></li>
-												<li class={positions == 4 && "active" } onClick={() => setPostion(4)}><a ><i class="fa-solid fa-building-circle-check"></i>My Interest</a></li>
+												<li style={{cursor:"pointer"}}  class={positions == 1 && "active" } onClick={() => setPostion(1)}><a ><i class="fa-solid fa-address-card"></i>My Profile</a></li>
+												<li style={{cursor:"pointer"}} class={positions == 2 && "active" } onClick={() => setPostion(2)}><a ><i class="fa-solid fa-gauge"></i>Manage</a></li>
+												<li style={{cursor:"pointer"}} class={positions == 3 && "active" } onClick={() => setPostion(3)}><a ><i class="fa-solid fa-bookmark"></i>Raad Reeb</a></li>
+												<li style={{cursor:"pointer"}} class={positions == 4 && "active" } onClick={() => setPostion(4)}><a ><i class="fa-solid fa-building-circle-check"></i>My Interest</a></li>
 												{/* <li class={positions == 5 && "active" } onClick={() => setPostion(5)}><a ><i class="fa-solid fa-house"></i>Submit New Property</a></li>
 												<li class={positions == 6 && "active" } onClick={() => setPostion(6)}><a ><i class="fa-solid fa-unlock"></i>Change Password</a></li> */}
-												<li class={positions == 7 && "active" } onClick={() => showAlert()}><a ><i class="fa-solid fa-power-off"></i>Log Out</a></li>
+												<li style={{cursor:"pointer"}} class={positions == 7 && "active" } onClick={() => showAlert()}><a ><i class="fa-solid fa-power-off"></i>Log Out</a></li>
 											</ul>
 										</div>
 										
@@ -308,31 +308,31 @@ function MyAccount() {
 									<h4>Manage</h4>
                                     <div class="row">
 					
-								<div onClick={() =>{
+								<div  onClick={() =>{
                                     // updateUser('3')
                                  navigate("/my_account/tenent", {state: 3})
                                  }} class="col-lg-4 col-md-6 col-sm-12">
-									<div class="dashboard-stat widget-1">
+									<div style={{cursor:"pointer"}} class="dashboard-stat widget-1">
 										<div class="dashboard-stat-content"><h4>Tenant</h4></div>
 										<div class="dashboard-stat-icon"><i class="fa-solid fa-location-dot"></i></div>
 									</div>	
 								</div>
 								
-								<div onClick={() => {
+								<div  onClick={() => {
                                     // updateUser('1')
                                     navigate("/my_account/owner", {state: "1"})
                                     }} class="col-lg-4 col-md-6 col-sm-12">
-									<div class="dashboard-stat widget-2">
+									<div style={{cursor:"pointer"}} class="dashboard-stat widget-2">
 										<div class="dashboard-stat-content"><h4>Owner/Landlord</h4></div>
 										<div class="dashboard-stat-icon"><i class="ti-pie-chart"></i></div>
 									</div>	
 								</div>
 								
-								<div onClick={() => {
+								<div  onClick={() => {
                                     // updateUser('4')
                                     navigate("/my_account/builder", {state:"4"})
                                     }} class="col-lg-4 col-md-6 col-sm-12">
-									<div class="dashboard-stat widget-3">
+									<div style={{cursor:"pointer"}} class="dashboard-stat widget-3">
 										<div class="dashboard-stat-content"><h4>Builder</h4></div>
 										<div class="dashboard-stat-icon"><i class="ti-user"></i></div>
 									</div>	

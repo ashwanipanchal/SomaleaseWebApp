@@ -1,7 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import ScreenLoader from '../components/LoaderButton/ScreenLoader';
+import { about_us } from '../api/auth';
+
 const AboutUs = () => {
+    const [loading, setLoading] = useState(false);
+	const [data, setData] = useState("")
+
+	useEffect(() =>{
+		getData()
+	},[])
+
+	const getData = async() => {
+		setLoading(true)
+		const res = await about_us()
+		console.log(res)
+		setData(res.about_us)
+        setLoading(false);
+	}
+
+	if(loading) {
+
+		return <ScreenLoader/>
+	}
+
+
   return (
     <>
     <Header/>
@@ -10,13 +34,18 @@ const AboutUs = () => {
 				
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
-							<div style={{marginTop:"50px"}} class="sec-heading center">
+							<div style={{marginTop:"50px"}} class="sec-heading">
 								<h2>About Us</h2>
 
-                <p>              Last Updated: June 6, 2024 Welcome to www.somalease.com and the Somalease mobile applications (collectively, the “Services”). By accessing or using our Services, you agree to be bound by these Terms of Use. Please read them carefully.</p>
+								<div
+									dangerouslySetInnerHTML={{ __html: data }}
+								/>
+
+
+                {/* <p>              Last Updated: June 6, 2024 Welcome to www.somalease.com and the Somalease mobile applications (collectively, the “Services”). By accessing or using our Services, you agree to be bound by these Terms of Use. Please read them carefully.</p>
 
    <p> 1.    Acceptance of Terms
-By accessing or using our Services, you agree to comply with and be bound by these terms and conditions. If you do not agree, please do not use the Services.</p>
+By accessing or using our Services, you agree to comply with and be bound by these terms and conditions. If you do not agree, please do not use the Services.</p> */}
     {/* 2.    Changes to Terms  */}
 {/* Somalease Ltd. reserves the right to modify these Terms of Use at any time. Any changes will be effective immediately upon posting on our website or mobile applications. Your continued use of the Services after changes are posted constitutes your acceptance of the new terms.
     3.    Use of the Services

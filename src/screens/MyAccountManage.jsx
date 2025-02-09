@@ -51,6 +51,7 @@ function MyAccountManage() {
 
     useEffect(() => {
 		let pos = localStorage.getItem("deep_position");
+		console.log(pos)
 		if(pos != null) {
 			setPostion(pos)
 		}
@@ -79,13 +80,6 @@ function MyAccountManage() {
 			<section class="bg-light mt-40">
 				<div class="container-fluid">
 				
-					<div class="row">
-						<div class="col-lg-12 col-md-12 mt-4">
-							<div class="filter_search_opt">
-								<a href="javascript:void(0);" onclick="openFilterSearch()" class="btn btn-dark full-width mb-4">Dashboard Navigation<i class="fa-solid fa-bars ms-2"></i></a>
-							</div>
-						</div>
-					</div>
 								
 					<div class="row">
 						

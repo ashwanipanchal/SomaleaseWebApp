@@ -44,11 +44,12 @@ const Footer = () => {
   							<div class="footer-widget">
   								<h4 class="widget-title">Navigations</h4>
   								<ul class="footer-menu">
+  									<li><a>All Property</a></li>
+  									<li><a>Services</a></li>
+  									<li onClick={() => navigate("/privacy_policy")}><a >Privacy Policy</a></li>
+  									<li onClick={() => navigate("/terms&conditions")}><a >Terms & Conditons</a></li>
   									<li onClick={() => navigate("/about_us")}><a href="">About Us</a></li>
-  									<li><a href="faq.html">FAQs Page</a></li>
-  									<li><a href="checkout.html">Checkout</a></li>
-  									<li><a href="contact.html">Contact</a></li>
-  									<li><a href="blog.html">Blog</a></li>
+  									{/* <li><a href="blog.html">Blog</a></li> */}
   								</ul>
   							</div>
   						</div>
@@ -66,7 +67,7 @@ const Footer = () => {
   							</div>
   						</div> */}
 
-  						<div class="col-lg-2 col-md-4">
+  						{/* <div class="col-lg-2 col-md-4">
   							<div class="footer-widget">
   								<h4 class="widget-title">My Account</h4>
   								<ul class="footer-menu">
@@ -77,12 +78,12 @@ const Footer = () => {
   									<li><a href="#">Cart</a></li>
   								</ul>
   							</div>
-  						</div>
+  						</div> */}
 
   						<div class="col-lg-2 col-md-4">
   							<div class="footer-widget">
   								<h4 class="widget-title">Download Apps</h4>
-  								<a href="#" class="other-store-link">
+  								<a class="other-store-link">
   									<div class="other-store-app">
   										<div class="os-app-icon">
   											<span class="svg-icon text-light svg-icon-2hx">
@@ -101,7 +102,7 @@ const Footer = () => {
   										</div>
   									</div>
   								</a>
-  								<a href="#" class="other-store-link">
+  								{/* <a href="#" class="other-store-link">
   									<div class="other-store-app">
   										<div class="os-app-icon">
   											<span class="svg-icon text-light svg-icon-2hx">
@@ -116,7 +117,7 @@ const Footer = () => {
   											<span>Now it Available</span>
   										</div>
   									</div>
-  								</a>
+  								</a> */}
   							</div>
   						</div>
 
@@ -129,17 +130,17 @@ const Footer = () => {
   					<div class="row align-items-center">
 
   						<div class="col-lg-6 col-md-6">
-  							<p class="mb-0">© 2024 Somalease All Rights Reserved</p>
+  							<p class="mb-0">© 2025 Somalease All Rights Reserved</p>
   						</div>
 
-  						<div class="col-lg-6 col-md-6 text-right">
+  						{/* <div class="col-lg-6 col-md-6 text-right">
   							<ul class="footer-bottom-social">
   								<li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
   								<li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
   								<li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
   								<li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
   							</ul>
-  						</div>
+  						</div> */}
 
   					</div>
   				</div>

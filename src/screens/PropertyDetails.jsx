@@ -6,8 +6,8 @@ import C1 from '../assets/img/p-1.jpg'
 import C2 from '../assets/img/p-2.jpg'
 import C3 from '../assets/img/p-3.jpg'
 import C4 from '../assets/img/p-4.jpg'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useParams } from 'react-router-dom'
 import { property_details } from '../api/auth'
@@ -15,6 +15,14 @@ import Loader from '../components/Loader'
 import Collapsible from 'react-collapsible';
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+const images = [
+	"https://res.cloudinary.com/demo/image/upload/v1652345767/docs/demo_image2.jpg",
+	"https://res.cloudinary.com/demo/image/upload/v1652366604/docs/demo_image5.jpg",
+	"https://res.cloudinary.com/demo/image/upload/v1652345874/docs/demo_image1.jpg",
+  ];
 
 function PropertyDetails() {
 	let { user_id ,id } = useParams();
@@ -69,13 +77,20 @@ function PropertyDetails() {
 				<>
 
                 <div className="slider-container">
-                <Slider {...settings}>
+                {/* <Slider {...settings}>
 					{propertyDetail?.propertie_image?.map((i, index) => {
 						return(
 						<div><a  ><img src={i?.gallery_image} class="img-fluid mx-auto" alt="" /></a></div>
 					)})}
 					
-                </Slider>
+                </Slider> */}
+				      <Carousel useKeyboardArrows={true} showThumbs={false}>
+						{propertyDetail?.propertie_image?.map((i, index) => (
+						<div className="slide">
+							<img alt="sample_file" style={{height:"700px"}} src={i?.gallery_image} key={index} />
+						</div>
+						))}
+					</Carousel>
                 </div>
 
 {/* <!-- ============================ Hero Banner  Start================================== --> */}

@@ -7,10 +7,35 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const isAllPropertiesRoute = location.pathname.includes('/my_account');
+  const isServiceRoute = location.pathname.includes('/services');
+  const isPropertyRoute = location.pathname.includes('/all_properties/all');
+  const isHomeRoute = location.pathname.includes('/');
   const isHome = location.pathname.includes('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    // Example: Check if user is logged in (this could be from localStorage, context, etc.)
+    const user = localStorage.getItem('user'); // or any other method to check login status
+    if (user) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const handleLogin = () => {
+    // Logic for logging in the user
+    localStorage.setItem('user', 'loggedIn'); // Simulate login
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    // Logic for logging out the user
+    localStorage.removeItem('user'); // Simulate logout
+    setIsLoggedIn(false);
+  };
+  
   const closeModal = () => setShowModal(false);
   const ViewModal = () => setShowModal(true);
 
@@ -82,38 +107,42 @@ const Header = () => {
           </div>
           <div  className={`nav-menus-wrapper ${isMobileMenuOpen ? "open" : ""}`}>
             <ul className="nav-menu">
-              <li onClick={() => navigate("/")}>
+              <li style={{cursor:"pointer"}} className={isHome && "active"} onClick={() => navigate("/")}>
                 <a>
                   Home
                 </a>
               </li>
 
-              <li onClick={() => navigate("/all_properties/all")}>
+              <li style={{cursor:"pointer"}} className={isPropertyRoute && "active"} onClick={() => navigate("/all_properties/all")}>
                 <a>
                   All Property
                 </a>
+                
               </li>
-              <li onClick={() => navigate("/services")}>
+              <li style={{cursor:"pointer"}} className={isServiceRoute && "active"} onClick={() => navigate("/services")}>
                 <a>
                   Services
                 </a>
               </li>
               
-              <li className={isAllPropertiesRoute && "active"} onClick={() => navigate("/my_account")}><a>My Account</a>
+              <li style={{cursor:"pointer"}} className={isAllPropertiesRoute && "active"} onClick={() => navigate("/my_account")}><a>My Account</a>
 								</li>
             </ul>
 
             <ul className="nav-menu nav-menu-social align-to-right">
-            <li style={{cursor:"pointer"}} onClick={() => navigate("/post_property")} class="add-listing">
-									<a class="bg-primary me-2">
+            <li style={{cursor:"pointer"}}  class="add-listing">
+									<a onClick={() => navigate("/post_property")} class="bg-primary me-2">
 										<span class="svg-icon svg-icon-muted svg-icon-2hx me-1">
 										</span>Post Property
 									</a>
-									<a class="bg-primary">
+                  {localStorage.getItem("user") == null && (
+
+									<a onClick={() => navigate("/login")} class="bg-primary">
 										<span class="svg-icon svg-icon-muted svg-icon-2hx me-1">
                       
 										</span>Login
 									</a>
+                  )}
 								</li>
             {/* <li style={{cursor:"pointer"}} onClick={() => navigate("/post_property")} class="add-listing">
 									<a class="bg-primary">

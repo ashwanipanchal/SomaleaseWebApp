@@ -15,7 +15,7 @@ import LocationSearchComponent from '../components/postPropertyComponents/Locati
 function PostProperty() {
 
 	const [goSteps, setGoSteps] = useState(0);
-	const [currentStep, setCurrentStep] = useState(1);
+	const [currentStep, setCurrentStep] = useState(5);
 	const [passData, setPassData] = useState({});
 
 	const incrementStep = () => {
